@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from './card';
-import { PlayIcon } from '@/components/shared/icons';
+import PlayIcon from '@/components/shared/icons/PlayIcon';
 
 export default {
   title: 'UI/Card',
@@ -9,14 +9,7 @@ export default {
 
 export const Mobile = () => (
   <Card
-    className="
-      flex h-[180px] w-[140px]
-      flex-col-reverse items-center justify-center
-      gap-3
-      rounded-[24px]
-      border border-neutral-200
-      bg-white p-4
-    "
+    className="flex h-[180px] w-[140px] flex-col-reverse items-center justify-center gap-3 rounded-[24px] border border-neutral-200 bg-white p-4"
     iconClassName="
       flex h-[72px] w-[72px]
       items-center justify-center
@@ -29,7 +22,7 @@ export const Mobile = () => (
     title="پلی استور"
     link="/"
     linkLabel={
-      <span className="flex items-center gap-1 text-amber-500 text-sm">
+      <span className="flex items-center gap-1 text-sm text-amber-500">
         <span>←</span> خرید
       </span>
     }

@@ -1,10 +1,6 @@
 import { PaginationProps } from './types';
 
-export const Pagination = ({
-  totalPages,
-  currentPage,
-  className,
-}: PaginationProps) => {
+export const Pagination = ({ totalPages, currentPage, className, onChange }: PaginationProps) => {
   return (
     <div className={`flex gap-2 ${className}`}>
       {Array.from({ length: totalPages }).map((_, index) => {
@@ -12,12 +8,13 @@ export const Pagination = ({
 
         return (
           <div
-           role="presentation"
+            role="presentation"
             key={index}
+            onClick={() => onChange(index)}
             className={
               isActive
-                ? 'w-6 h-2 rounded-full bg-orange-500 transition-all'
-                : 'w-2 h-2 rounded-full bg-orange-300'
+                ? 'h-2 w-6 rounded-full bg-orange-500 transition-all'
+                : 'h-2 w-2 rounded-full bg-orange-300'
             }
           />
         );
