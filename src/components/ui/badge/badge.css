@@ -1,0 +1,22 @@
+@layer components {
+  .badge {
+    @apply inline-flex items-center justify-center align-middle whitespace-nowrap transition-colors;
+  }
+  
+  .badge-text-md {
+    @apply px-2.5 py-0.5 text-xs font-semibold;
+  }
+
+  .badge-fill .badge-primary {
+    @apply bg-primary-500 text-white;
+  }
+
+  .badge-outline .badge-primary {
+    @apply border-primary-500 text-primary-500 border bg-transparent;
+  }
+
+  .badge-fullRounded {
+    @apply rounded-full;
+  }
+}
+
