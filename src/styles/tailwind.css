@@ -3,7 +3,8 @@
 @import './components/ui/styles.css';
 @import './components/shared/styles.css';
 
-@custom-variant dark (&:is(.dark *));
+
+ @custom-variant dark (&: is(.dark *));
 
 @theme inline {
   --font-dana: var(--font-dana);

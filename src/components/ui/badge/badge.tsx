@@ -28,7 +28,7 @@ export const badgeVariants = cva('badge', {
 });
 
 export const Badge: React.FC<BadgeProps> = ({
-  className = 'badge-text-md',
+  className,
   variant,
   color,
   rounded = false,
@@ -38,7 +38,11 @@ export const Badge: React.FC<BadgeProps> = ({
   children,
   ...props
 }) => {
-  const badgeClasses = cn(badgeVariants({ variant, color, rounded, fullWidth }), className);
+  const badgeClasses = cn(
+    badgeVariants({ variant, color, rounded, fullWidth }),
+    'badge-padding-base', 
+    className,
+  );
 
   const badgeContent = (
     <>
@@ -47,6 +51,7 @@ export const Badge: React.FC<BadgeProps> = ({
       {endIcon ? <span className={cn(children && 'ml-2')}>{endIcon}</span> : null}
     </>
   );
+
   return (
     <span className={badgeClasses} {...(props as BadgeProps)}>
       {badgeContent}

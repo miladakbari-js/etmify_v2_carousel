@@ -1,22 +1,34 @@
 @layer components {
   .badge {
-    @apply inline-flex items-center justify-center align-middle whitespace-nowrap transition-colors;
+    @apply flex h-auto min-h-0 items-center justify-center font-medium transition-colors;
   }
-  
-  .badge-text-md {
+
+  .badge-padding-base {
     @apply px-2.5 py-0.5 text-xs font-semibold;
   }
 
-  .badge-fill .badge-primary {
+  .badge-primary.badge-fill {
     @apply bg-primary-500 text-white;
   }
-
-  .badge-outline .badge-primary {
+  .badge-primary.badge-outline {
     @apply border-primary-500 text-primary-500 border bg-transparent;
+  }
+
+  .badge-error.badge-fill {
+    @apply bg-error-400 text-white;
+  }
+  .badge-error.badge-outline {
+    @apply border-error-400 text-error-400 border bg-transparent;
+  }
+
+  .badge-success.badge-fill {
+    @apply bg-success-200 text-white;
+  }
+  .badge-success.badge-outline {
+    @apply border-success-400 text-success-400 bg-success-100 border;
   }
 
   .badge-fullRounded {
     @apply rounded-full;
   }
 }
-
